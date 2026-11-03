@@ -30,7 +30,7 @@ This repository is designed for workshop participants (up to 25 developers) to b
 ```bash
 # 1. Clone your generated repository
 git clone <your-workshop-repo-url>
-cd unlockhertech-workshop-template
+cd uht-workshop-template
 
 # 2. Install dependencies
 npm install
@@ -60,7 +60,7 @@ Visit [http://localhost:5173](http://localhost:5173) in your browser. Navigate t
 ## 📁 Repository Directory Structure
 
 ```text
-workshop-template/
+uht-workshop-template/
 ├── .github/
 │   ├── workflows/
 │   │   └── ci.yml                     # Automated CI pipeline (typecheck, lint, test, build)
@@ -161,11 +161,11 @@ To publish this folder as a standalone GitHub Template Repository:
 
 1. **Initialize Git & Push to GitHub:**
    ```bash
-   cd workshop-template
+   cd uht-workshop-template
    git init
    git add .
    git commit -m "feat: initial workshop template repository"
-   git remote add origin https://github.com/unlockhertech/workshop-template.git
+   git remote add origin https://github.com/unlockhertech/uht-workshop-template.git
    git branch -M main
    git push -u origin main
    ```
