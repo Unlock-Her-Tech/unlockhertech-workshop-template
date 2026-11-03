@@ -66,7 +66,8 @@ uht-workshop-template/
 ├── .github/
 │   ├── workflows/
 │   │   └── ci.yml                     # Automated CI pipeline (typecheck, lint, test, build)
-│   └── pull_request_template.md       # Standardized PR checklist and screenshot requirements
+│   ├── pull_request_template.md       # Standardized PR checklist and screenshot requirements
+│   └── PULL_REQUEST_TEMPLATE_EXAMPLE.md # Example completed PR submission
 ├── CONTRIBUTING.md                    # Step-by-step contribution & Git workflow guide
 ├── public/                            # Static assets and favicon
 ├── src/
