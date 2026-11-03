@@ -2,6 +2,8 @@
 
 > **Official Workshop Boilerplate & Developer Guide**  
 > An isolated, dependency-free development template for building and testing features to contribute to [Unlock Her Tech](https://unlockhertech.com).
+>
+> 📖 **Looking for the contribution guide?** See [CONTRIBUTING.md](./CONTRIBUTING.md) for a step-by-step walkthrough on forking, local setup, git branching, and opening pull requests!
 
 ---
 
@@ -65,6 +67,7 @@ uht-workshop-template/
 │   ├── workflows/
 │   │   └── ci.yml                     # Automated CI pipeline (typecheck, lint, test, build)
 │   └── pull_request_template.md       # Standardized PR checklist and screenshot requirements
+├── CONTRIBUTING.md                    # Step-by-step contribution & Git workflow guide
 ├── public/                            # Static assets and favicon
 ├── src/
 │   ├── app/                           # Core Design System & Shared UI Primitives
