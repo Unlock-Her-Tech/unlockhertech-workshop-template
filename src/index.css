@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-coral: #B42970;
+  --color-brand-coral-deep: #8A1F55;
+  --color-brand-coral-light: #C2327C;
+  --color-brand-yellow: #E8563A;
+  --color-brand-blue: #5F9DE3;
+  --color-brand-pink: #F4A0B4;
+  --color-brand-green: #72C472;
+  --color-primary: #030213;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #FAFAF9;
+  color: #111827;
+}

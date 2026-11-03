@@ -1,0 +1,40 @@
+import type { MentorProfile } from '../../app/types';
+
+export const MOCK_MENTORS: MentorProfile[] = [
+  {
+    id: 'mentor-1',
+    name: 'Dr. Evelyn Zhang',
+    title: 'Staff AI/ML Engineer',
+    company: 'DeepMind',
+    yearsOfExperience: 9,
+    avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80',
+    skills: ['Python', 'PyTorch', 'LLMs', 'System Architecture', 'Career Strategy'],
+    bio: 'Passionate about mentoring engineers transitioning from software engineering into specialized machine learning roles.',
+    availableFor: ['1-on-1 Mentorship', 'Architecture Pairing', 'Career Strategy' as any],
+    calendlyUrl: 'https://calendly.com/evelyn-zhang/mentorship-30min',
+  },
+  {
+    id: 'mentor-2',
+    name: 'Tamika Washington',
+    title: 'Engineering Director',
+    company: 'Spotify',
+    yearsOfExperience: 14,
+    avatarUrl: 'https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=256&q=80',
+    skills: ['Engineering Leadership', 'System Design', 'Offer Negotiation', 'Team Scaling'],
+    bio: 'Helping senior engineers step into engineering management and executive leadership roles with confidence.',
+    availableFor: ['1-on-1 Mentorship', 'Mock Interview', 'Resume Review'],
+    calendlyUrl: 'https://calendly.com/tamika-washington/leadership-coaching',
+  },
+  {
+    id: 'mentor-3',
+    name: 'Clara Johansson',
+    title: 'Lead Frontend Architect',
+    company: 'Vercel',
+    yearsOfExperience: 8,
+    avatarUrl: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=256&q=80',
+    skills: ['React 19', 'TypeScript', 'Web Performance', 'Design Systems', 'A11y'],
+    bio: 'Specializing in frontend architecture, web performance profiling, and accessible design system engineering.',
+    availableFor: ['Architecture Pairing', 'Mock Interview', '1-on-1 Mentorship'],
+    calendlyUrl: 'https://calendly.com/clara-johansson/frontend-pairing',
+  },
+];
