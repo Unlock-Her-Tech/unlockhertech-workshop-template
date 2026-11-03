@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import type { MentorProfile } from '../../app/types';
+import type { MentorProfile } from '../../../app/types';
 import { Modal } from '../../../app/components/Modal';
 import { Input } from '../../../app/components/Input';
 import { Button } from '../../../app/components/Button';

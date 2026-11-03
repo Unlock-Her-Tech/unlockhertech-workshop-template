@@ -11,8 +11,6 @@ import {
   HiSparkles,
   HiCodeBracket,
   HiCommandLine,
-  HiRocketLaunch,
-  HiCheckBadge,
 } from 'react-icons/hi2';
 
 function HomePage() {

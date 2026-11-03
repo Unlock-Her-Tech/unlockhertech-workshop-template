@@ -1,4 +1,4 @@
-import type { MentorProfile } from '../../app/types';
+import type { MentorProfile } from '../../../app/types';
 import { Card } from '../../../app/components/Card';
 import { Badge } from '../../../app/components/Badge';
 import { Button } from '../../../app/components/Button';
