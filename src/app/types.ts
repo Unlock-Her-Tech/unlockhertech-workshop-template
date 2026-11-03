@@ -74,7 +74,7 @@ export interface MentorProfile {
   avatarUrl: string;
   skills: string[];
   bio: string;
-  availableFor: ('1-on-1 Mentorship' | 'Resume Review' | 'Mock Interview' | 'Architecture Pairing')[];
+  availableFor: ('1-on-1 Mentorship' | 'Resume Review' | 'Mock Interview' | 'Architecture Pairing' | 'Career Strategy')[];
   calendlyUrl: string;
 }
 

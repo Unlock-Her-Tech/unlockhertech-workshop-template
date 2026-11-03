@@ -10,7 +10,7 @@ export const MOCK_MENTORS: MentorProfile[] = [
     avatarUrl: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=256&q=80',
     skills: ['Python', 'PyTorch', 'LLMs', 'System Architecture', 'Career Strategy'],
     bio: 'Passionate about mentoring engineers transitioning from software engineering into specialized machine learning roles.',
-    availableFor: ['1-on-1 Mentorship', 'Architecture Pairing', 'Career Strategy' as any],
+    availableFor: ['1-on-1 Mentorship', 'Architecture Pairing', 'Career Strategy'],
     calendlyUrl: 'https://calendly.com/evelyn-zhang/mentorship-30min',
   },
   {

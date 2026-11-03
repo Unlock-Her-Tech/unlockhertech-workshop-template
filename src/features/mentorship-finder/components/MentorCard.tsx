@@ -1,7 +1,7 @@
-import type { MentorProfile } from '../../../app/types';
-import { Card } from '../../../app/components/Card';
-import { Badge } from '../../../app/components/Badge';
-import { Button } from '../../../app/components/Button';
+import type { MentorProfile } from '@/app/types.ts';
+import { Card } from '@/app/components/Card.tsx';
+import { Badge } from '@/app/components/Badge.tsx';
+import { Button } from '@/app/components/Button.tsx';
 import { HiBriefcase, HiSparkles } from 'react-icons/hi2';
 
 export interface MentorCardProps {

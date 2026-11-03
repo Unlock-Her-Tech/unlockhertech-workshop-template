@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FEATURE_REGISTRY } from '../features/registry';
-import { useMockData } from '../app/context/MockDataContext';
+import { useMockData } from '../app/context/useMockData';
 import { Button } from '../app/components/Button';
 import { Badge } from '../app/components/Badge';
 import {

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { mockClient } from '../../mocks/mockClient';
 import type {
   JobPosting,
@@ -7,18 +7,7 @@ import type {
   ResourcePlaybook,
   MentorProfile,
 } from '../types';
-
-interface MockDataContextType {
-  jobs: JobPosting[];
-  events: CommunityEvent[];
-  posts: BlogPost[];
-  resources: ResourcePlaybook[];
-  mentors: MentorProfile[];
-  loading: boolean;
-  refreshData: () => Promise<void>;
-}
-
-const MockDataContext = createContext<MockDataContextType | undefined>(undefined);
+import { MockDataContext } from './useMockData';
 
 export function MockDataProvider({ children }: Readonly<{ children: React.ReactNode }>) {
   const [jobs, setJobs] = useState<JobPosting[]>([]);
@@ -28,7 +17,7 @@ export function MockDataProvider({ children }: Readonly<{ children: React.ReactN
   const [mentors, setMentors] = useState<MentorProfile[]>([]);
   const [loading, setLoading] = useState(true);
 
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     setLoading(true);
     try {
       const [fetchedJobs, fetchedEvents, fetchedPosts, fetchedResources, fetchedMentors] =
@@ -49,10 +38,34 @@ export function MockDataProvider({ children }: Readonly<{ children: React.ReactN
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
-    loadData();
+    let isMounted = true;
+    Promise.all([
+      mockClient.getJobs(),
+      mockClient.getEvents(),
+      mockClient.getPosts(),
+      mockClient.getResources(),
+      mockClient.getMentors(),
+    ])
+      .then(([fetchedJobs, fetchedEvents, fetchedPosts, fetchedResources, fetchedMentors]) => {
+        if (!isMounted) return;
+        setJobs(fetchedJobs);
+        setEvents(fetchedEvents);
+        setPosts(fetchedPosts);
+        setResources(fetchedResources);
+        setMentors(fetchedMentors);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.warn('Failed to load mock data:', err);
+        if (isMounted) setLoading(false);
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
@@ -70,12 +83,4 @@ export function MockDataProvider({ children }: Readonly<{ children: React.ReactN
       {children}
     </MockDataContext.Provider>
   );
-}
-
-export function useMockData() {
-  const context = useContext(MockDataContext);
-  if (!context) {
-    throw new Error('useMockData must be used within a MockDataProvider');
-  }
-  return context;
 }

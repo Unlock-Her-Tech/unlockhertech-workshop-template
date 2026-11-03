@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import type { MentorProfile } from '../../../app/types';
-import { Modal } from '../../../app/components/Modal';
-import { Input } from '../../../app/components/Input';
-import { Button } from '../../../app/components/Button';
-import { mockClient } from '../../../mocks/mockClient';
+import type { MentorProfile } from '@/app/types.ts';
+import { Modal } from '@/app/components/Modal.tsx';
+import { Input } from '@/app/components/Input.tsx';
+import { Button } from '@/app/components/Button.tsx';
+import { mockClient } from '@/mocks/mockClient.ts';
 import { HiCheckCircle } from 'react-icons/hi2';
 
 export interface MentorBookingModalProps {

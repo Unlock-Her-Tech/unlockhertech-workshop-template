@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from 'react';
-import { mockClient } from '../../../mocks/mockClient';
-import type { MentorProfile } from '../../../app/types';
+import { mockClient } from '@/mocks/mockClient.ts';
+import type { MentorProfile } from '@/app/types.ts';
 
 export function useMentorDirectory() {
   const [mentors, setMentors] = useState<MentorProfile[]>([]);
